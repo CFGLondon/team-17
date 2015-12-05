@@ -11,7 +11,7 @@ ChartAsset::register($this);
 ?>
 <div class="jumbotron" style="background: url('img/banner-event.png'); background-size: cover; height: 600px">
   <div class="container text-center">
-    <h1 style="color: white">Do It for Charity Text Santa Run</h1>
+    <h1 style="color: white"><?= $detail['Name'] ?></h1>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Join</a></p>
   </div>
 </div>
@@ -20,20 +20,24 @@ ChartAsset::register($this);
     <div class="col-lg-6">
       <h2>Event details</h2>
       <p>
-        Date: 6 Dec 2015<br>
-        Location: Victoria Park, London<br>
+        Date: <?= $detail['Date'] ?><br>
+        Location: <?= $detail['Location'] ?><br>
         Pot: £20<br>
         Detail: Join us and run for the children!
       </p>
     </div>
     <div class="col-lg-6 text-center">
       <h2>Participants</h2>
-      <?php for ($j = 0; $j < 4; $j++) { ?>
+        <?php foreach ($participants as $key => $hero) { ?>
         <div class="col-sm-3">
-          <a href="<?= Url::to(['/site/profile']) ?>"><?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
-          <p>Bengio</p>
-          <?= Html::img('@web/img/zoubin.jpg', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?>
-          <p>Zoubin</p>
+          <a href="<?= Url::to(['/site/profile', 'id' => $hero['Hid']]) ?>"><?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
+          <p><?= $hero['Surame'] ?></p>
+        </div>
+        <?php } ?>
+        <?php for ($i = 0; $i < 4 - (sizeof($participants) % 4); $i++) { ?>
+        <div class="col-sm-3">
+          <?= Html::img('@web/img/anon.png', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?>
+          <p>...</p>
         </div>
         <?php } ?>
         <a href="#" class="btn btn-lg btn-primary">Invite others</a>

@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\db\Query;
 
 class SiteController extends Controller
 {
@@ -49,7 +50,13 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $query = new Query;
+        // compose the query
+        $query->from('event');
+        // build and execute the query
+        $rows = $query->all();
+
+        return $this->render('index', array('events' => $rows));
     }
 
     public function actionLogout()
@@ -89,8 +96,30 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionProfile()
+    public function actionProfile($id)
     {
-        return $this->render('profile');
+        $query = new Query;
+        // compose the query
+        $query->select('Hid, Name, Surame')
+            ->from('hero')
+            ->where('Hid=:id', array(':id' => $id));
+        $hero = $query->one();
+
+        $q = new Query;
+        $q->from('takespart')
+            ->innerJoin('event', 'takespart.EventId=event.Eid')
+            ->where('HeroId=:id', array(':id' => $id));
+        $event = $q->one();
+
+        return $this->render('profile', array('hero' => $hero, 'event' => $event));
+    }
+
+    public function actionTraining($id)
+    {
+        $q = new Query;
+        $q->from('train')
+            ->where('HeroId=:id', array(':id' => $id));
+        $training = $q->all();
+        return json_encode($training);
     }
 }

@@ -13,10 +13,10 @@ ChartAsset::register($this);
       </div>
       <div class="col-lg-8">
         <p>HERO</p>
-        <h2>Yoshua Bengio</h2>
+        <h2><?= $hero['Name'] . ' ' . $hero['Surame'] ?></h2>
         <p>
-          6 Dec 2015<br>
-          Do It for Charity Text Santa Run
+          <?= $event['Date'] ?><br>
+          <?= $event['Name'] ?>
         </p>
       </div>
     </div>
