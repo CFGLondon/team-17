@@ -6,6 +6,7 @@ $date = $motivated['by'];
 $distance = $motivated['run'];
 $time = $motivated['in'];
 $donationVal = $motivated['prize'];
+$heroName = $hero['Name']." ".$hero['Surname'];
 ?>
 
 <div class="jumbotron">
@@ -13,7 +14,7 @@ $donationVal = $motivated['prize'];
 		<div class="row">
 			<div class='col-md-5'>
 				<h3>
-					<?="You promise that if $distance miles are ran by $date, in less than $time minutes, you will donate $$donationVal.00."?>
+					<?="You promise that if $distance miles are ran by $date, in less than $time minutes, you will donate $$donationVal.00. to $heroName."?>
                     <br><br><a class="twitter-share-button btn btn-info btn-lg"
                     href="https://twitter.com/intent/tweet?text=I promise that if <?= $distance ?> miles are ran by <?= $date ?>, in less than <?= $time ?> minutes, I will donate <?= $donationVal ?>! @savechildrenuk" data-size="large">
                     Tweet this!</a>

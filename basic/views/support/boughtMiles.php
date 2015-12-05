@@ -4,6 +4,7 @@ $this->title = "You Bought Miles";
 
 $numMiles = $boughtMiles['buy'];
 $donationVal = $boughtMiles['for'];
+$heroName = $hero['Name']." ".$hero['Surname'];
 ?>
 
 <div class="jumbotron">
@@ -12,7 +13,7 @@ $donationVal = $boughtMiles['for'];
 			<h3>
 				<?="You sponsored $numMiles miles."?>
 				<?=Html::beginTag('br')?>
-				<?="You promise to donate $$donationVal.00"?>
+				<?="You promise to donate $$donationVal.00 to $heroName."?>
 			</h3>
 		</div>
 	</div>

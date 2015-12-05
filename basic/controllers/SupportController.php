@@ -44,6 +44,8 @@ class SupportController extends Controller
         $query->from('hero')
             ->where('Hid=:id', array(':id' => $id));
         $hero = $query->one();
+        
+        $session->set('hero', $hero);
 		return $this->render('support', array('hero' => $hero));
 	}
 	
@@ -52,9 +54,11 @@ class SupportController extends Controller
 		$session = \Yii::$app->session;
 		
 		$bought = $session->get('bought');
+		$hero = $session->get('hero');
 		
 		return $this->render('boughtMiles', [
-				'boughtMiles' => $bought
+				'boughtMiles' => $bought,
+				'hero' => $hero
 		]);
 	}
 	
@@ -63,9 +67,11 @@ class SupportController extends Controller
 		$session = \Yii::$app->session;
 	
 		$donate = $session->get('donate');
+		$hero = $session->get('hero');
 	
 		return $this->render('donationMade', [
-				'donationMade' => $donate
+				'donationMade' => $donate,
+				'hero' => $hero
 		]);
 	}
 	
@@ -74,9 +80,11 @@ class SupportController extends Controller
 		$session = \Yii::$app->session;
 	
 		$motive = $session->get('motive');
+		$hero = $session->get('hero');
 	
 		return $this->render('motivated', [
-				'motivated' => $motive
+				'motivated' => $motive,
+				'hero' => $hero
 		]);
 	}
 }

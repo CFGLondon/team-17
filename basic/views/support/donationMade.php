@@ -4,6 +4,7 @@ $this->title = "You Bought Miles";
 
 $donationVal = $donationMade['give'];
 $message = $donationMade['leaveMsg'];
+$heroName = $hero['Name']." ".$hero['Surname'];
 ?>
 
 <div class="jumbotron">
@@ -20,7 +21,7 @@ $message = $donationMade['leaveMsg'];
 				<?=Html::beginTag('br')?>
 				<?=Html::beginTag('br')?>
 			<h3>
-				<?="You promise to donate $$donationVal.00"?>
+				<?="You promise to donate $$donationVal.00 to $heroName."?>
 			</h3>
 		</div>
 	</div>
