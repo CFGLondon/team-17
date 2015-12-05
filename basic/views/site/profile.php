@@ -28,11 +28,17 @@ ChartAsset::register($this);
 </div>
 <div class="container">
 <div class="row">
-  <canvas id="time-container" class="col-lg-12" height="100"></canvas>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="time">
+      <canvas id="time-container" class="col-lg-12" height="100"></canvas>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="heartrate">
+      <canvas id="heartrate-container" class="col-lg-12" height="100"></canvas>
+    </div>
+  </div>
   <ul class="nav nav-pills nav-justified">
-    <li role="presentation" class="active"><a href="#">TIME</a></li>
-    <li role="presentation"><a href="#">DISTANCE</a></li>
-    <li role="presentation"><a href="#">CALORIES</a></li>
+    <li role="presentation" class="active"><a href="#time" aria-controls="time" role="tab" data-toggle="tab">TIME</a></li>
+    <li role="presentation"><a href="#heartrate" aria-controls="heartrate" role="tab" data-toggle="tab">HEARTRATE</a></li>
   </ul>
 </div><!--/row-->
 </div>
