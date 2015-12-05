@@ -3,13 +3,13 @@ $this->title = 'Run 4 Good';
 use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
-<div class="jumbotron">
+<div class="jumbotron" style="background: url('img/banner-event.png'); background-size: cover; height: 600px">
   <div class="container text-center">
     <div class="row">
         <form>
-          <label for="event_name">Event Name</label>
+          <h1 style="color: white">Event Name</h1>
           <input class="form-control input-lg" type="text" name="event_name">
-          <input class="btn btn-lg btn-success" type="submit" value="Create">
+          <input class="btn btn-lg btn-success" type="submit" value="Create" style="margin-top: 20px">
     </div>
   </div>
 </div>

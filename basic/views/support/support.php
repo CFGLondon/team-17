@@ -3,7 +3,7 @@ $this->title = 'Run 4 Good';
 use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
-<div class="jumbotron">
+<div class="jumbotron" style="background: url('img/banner-profile.png'); background-size: cover; height: 600px">
   <div class="container text-center">
     <?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '100', 'height' => '100')); ?>
     <h3>Yoshua Bengio</h3>

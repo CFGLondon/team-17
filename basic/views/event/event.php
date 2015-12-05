@@ -9,9 +9,9 @@ MapAsset::register($this);
 MapGlobals::register($this);
 ChartAsset::register($this);
 ?>
-<div class="jumbotron">
-  <div class="container">
-    <h1>Do It for Charity Text Santa Run</h1>
+<div class="jumbotron" style="background: url('img/banner-event.png'); background-size: cover; height: 600px">
+  <div class="container text-center">
+    <h1 style="color: white">Do It for Charity Text Santa Run</h1>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Join</a></p>
   </div>
 </div>
