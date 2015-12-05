@@ -43,7 +43,7 @@ use yii\db\Query;
         ?>
         <?php foreach ($participants as $k => $participant) { ?>
         <div class="col-sm-3">
-          <a href="<?= Url::to(['/site/profile', 'id' => $participant['Hid']]) ?>"><?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
+          <a href="<?= Url::to(['/site/profile', 'id' => $participant['Hid']]) ?>"><?= Html::img('@web/' . $participant['Pic'], array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
           <p><?= $participant['Name'] ?></p>
         </div>
         <?php } ?>

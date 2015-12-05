@@ -17,6 +17,15 @@ ChartAsset::register($this);
 </div>
 <div class="container">
   <div class="row">
+    <div class="col-lg-12">
+      <!-- The map -->
+      <div id="map-here" onload='init();' class="col-lg-12" style="height: 400px; margin-top: 20px"></div>
+    </div>
+    <div class="col-lg-4">
+      <!-- Leaderboard -->
+    </div>
+  </div>
+  <div class="row">
     <div class="col-lg-6">
       <h2>Event details</h2>
       <p>
@@ -43,13 +52,4 @@ ChartAsset::register($this);
         <a href="#" class="btn btn-lg btn-primary">Invite others</a>
     </div>
   </div><!--/row-->
-  <div class="row">
-    <div class="col-lg-12">
-      <!-- The map -->
-      <div id="map-here" onload='init();' class="col-lg-12" style="height: 400px; margin-top: 20px"></div>
-    </div>
-    <div class="col-lg-4">
-      <!-- Leaderboard -->
-    </div>
-  </div>
 </div>
