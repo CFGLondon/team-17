@@ -9,7 +9,7 @@ class MapGlobals extends AssetBundle
 	public $baseUrl = '@web/js/Maps';
 	
 	public $js = [
-		'init.js'
+		'mapInit.js'
 	];
 	
 	public $jsOptions = ['position' => \yii\web\View::POS_END];

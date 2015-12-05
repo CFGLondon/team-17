@@ -18,5 +18,9 @@ class MapAsset extends AssetBundle
 		'updateLocZoom.js'
 	];
 	
+	public $css = [
+		'infoWindow.css'
+	];
+	
 	public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 }
