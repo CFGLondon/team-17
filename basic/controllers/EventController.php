@@ -32,4 +32,15 @@ class EventController extends Controller
     {
         return $this->render('create');
     }
+
+    public function actionSuccess($id)
+    {
+        $query = new Query;
+        // compose the query
+        $query->from('event')
+                ->where('Eid=:id', array(':id' => $id));
+        // build and execute the query
+        $detail = $query->one();
+        return $this->render('success', array('detail' => $detail));
+    }
 }

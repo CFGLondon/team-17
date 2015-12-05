@@ -12,7 +12,7 @@ ChartAsset::register($this);
 <div class="jumbotron" style="background: url('img/banner-event.png'); background-size: cover; height: 600px">
   <div class="container text-center">
     <h1 style="color: white"><?= $detail['Name'] ?></h1>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Join</a></p>
+    <p><a class="btn btn-primary btn-lg" href="<?= Url::to(['/event/success', 'id' => $detail['Eid']]) ?>" role="button">Join</a></p>
   </div>
 </div>
 <div class="container">
@@ -49,7 +49,10 @@ ChartAsset::register($this);
           <p>...</p>
         </div>
         <?php } ?>
-        <a href="#" class="btn btn-lg btn-primary">Invite others</a>
+        <!-- <a href="#" class="btn btn-lg btn-primary">Invite others</a> -->
+        <a class="twitter-share-button btn btn-primary btn-lg"
+          href="https://twitter.com/intent/tweet?text=Hey, guys, let's join <?= $detail['Name'] ?> and donate for @savechildrenuk!" data-size="large">
+          Invite others</a>
     </div>
   </div><!--/row-->
 </div>
