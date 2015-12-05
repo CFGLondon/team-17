@@ -16,7 +16,7 @@ $heroName = $hero['Name']." ".$hero['Surame'];
 				<h3>
 					<?="You promise that if $distance miles are ran by $date, in less than $time minutes, you will donate $$donationVal.00. to $heroName."?>
                     <br><br><a class="twitter-share-button btn btn-info btn-lg"
-                    href="https://twitter.com/intent/tweet?text=I promise that if <?= $distance ?> miles are ran by <?= $date ?>, in less than <?= $time ?> minutes, I will donate <?= $donationVal ?> to <?=$heroName?>! @savechildrenuk" data-size="large">
+                    href="https://twitter.com/intent/tweet?text=I promise that if <?= $distance ?> miles are ran by <?= $date ?>, in less than <?= $time ?> minutes, I will donate $<?= $donationVal ?>.00 to <?=$heroName?>! @savechildrenuk" data-size="large">
                     Tweet this!</a>
 				</h3>
 			</div>
