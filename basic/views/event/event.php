@@ -4,8 +4,10 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use app\assets\MapAsset;
 use app\assets\MapGlobals;
+use app\assets\ChartAsset;
 MapAsset::register($this);
 MapGlobals::register($this);
+ChartAsset::register($this);
 ?>
 <div class="jumbotron">
   <div class="container">
@@ -36,12 +38,14 @@ MapGlobals::register($this);
         <?php } ?>
         <a href="#" class="btn btn-lg btn-primary">Invite others</a>
     </div>
-    <div class="col-lg-8">
+  </div><!--/row-->
+  <div class="row">
+    <div class="col-lg-12">
       <!-- The map -->
-      <div id="map-here" onload='init();' class="col-lg-12" height="400px"></div>
+      <div id="map-here" onload='init();' class="col-lg-12" style="height: 400px; margin-top: 20px"></div>
     </div>
     <div class="col-lg-4">
       <!-- Leaderboard -->
     </div>
-  </div><!--/row-->
+  </div>
 </div>
