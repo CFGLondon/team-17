@@ -27,6 +27,7 @@ class AppAsset extends AssetBundle
         'js/ie10.js',
         'js/bootstrap-datepicker.js',
         'js/app.js',
+        'js/Chart.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -26,7 +26,7 @@ use yii\helpers\Url;
 </div>
 <div class="container">
 <div class="row">
-  <canvas id="myCanvas" style="background-color: gray" class="col-lg-12"></canvas>
+  <canvas id="time-container" class="col-lg-12" height="100"></canvas>
   <ul class="nav nav-pills nav-justified">
     <li role="presentation" class="active"><a href="#">TIME</a></li>
     <li role="presentation"><a href="#">DISTANCE</a></li>
