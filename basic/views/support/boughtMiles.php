@@ -4,7 +4,7 @@ $this->title = "You Bought Miles";
 
 $numMiles = $boughtMiles['buy'];
 $donationVal = $boughtMiles['for'];
-$heroName = $hero['Name']." ".$hero['Surname'];
+$heroName = $hero['Name']." ".$hero['Surame'];
 ?>
 
 <div class="jumbotron">

@@ -6,7 +6,7 @@ $date = $motivated['by'];
 $distance = $motivated['run'];
 $time = $motivated['in'];
 $donationVal = $motivated['prize'];
-$heroName = $hero['Name']." ".$hero['Surname'];
+$heroName = $hero['Name']." ".$hero['Surame'];
 ?>
 
 <div class="jumbotron">
