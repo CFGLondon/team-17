@@ -19,7 +19,7 @@ use yii\helpers\Url;
       </div>
     </div>
     <div class="col-lg-6">
-      <p><a class="btn btn-success btn-lg" href="#" role="button">Challenge me</a></p>
+      <p><a class="btn btn-success btn-lg" href="<?= Url::to(['/challenge']) ?>" role="button">Challenge me</a></p>
       <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support']) ?>" role="button">Support me</a></p>
     </div>
   </div>

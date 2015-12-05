@@ -1,16 +1,18 @@
 <?php
 $this->title = 'Run 4 Good';
 use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 <div class="jumbotron">
   <div class="container">
     <?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '100', 'height' => '100')); ?>
     <h3>Yoshua Bengio</h3>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Support me</a></p>
+    <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support']) ?>" role="button">Support me</a></p>
   </div>
 </div>
 <div class="container">
   <h1>Challenge</h1>
+  <form>
   <div class="row">
     <div class="col-lg-6">
       <div class="form-group">
@@ -48,5 +50,9 @@ use yii\helpers\Url;
       </div>
     </div>
     </div>
+    <div class="text-center">
+      <input class="btn btn-lg btn-danger" type="submit" value="I challenge you!">
+    </div>
   </div><!--/row-->
+  </form>
 </div>
