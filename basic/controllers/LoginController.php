@@ -6,10 +6,12 @@ use Yii;
 use yii\web\Controller;
 use yii\base\Object;
 use yii\helpers\Html;
+use yii\authclient\OAuth2;
 
 class LoginController extends Controller
 {
 	private $clientId = '229XBT';
+	private $secret = 'fd590071df7af3a872eec8d61d80f35e';
 	
 	public function actionIndex()
 	{
@@ -33,7 +35,7 @@ class LoginController extends Controller
 		$session = \Yii::$app->session;
 		$request = \Yii::$app->request;
 		
-		$base64auth = base64_encode("229XBT:fd590071df7af3a872eec8d61d80f35e");
+		$base64auth = base64_encode("229XBT:fd590071df7af3a872eec8d61d80f35et");
 		echo $base64auth;
 		$url = 'https://api.fitbit.com/oauth2/token';
 		$data = array(
@@ -43,8 +45,8 @@ class LoginController extends Controller
 		);
 		$options = array(
 				'https' => array(
-						'header'  => "Authorization: Basic ".$base64auth."\r\n".
-									 "Content-type: application/x-www-form-urlencoded\r\n",
+						'header'  => "Authorization: Basic ".base64_encode("229XBT:fd590071df7af3a872eec8d61d80f35et").
+									 "Content-type: application/x-www-form-urlencoded",
 						'method'  => 'POST',
 						'content' => http_build_query($data),
 				),

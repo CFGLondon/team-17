@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#buy_mile').on('keyup', function(event) {
-        $('#buy_price').val($(this).val() * 50);
+    $('#buy-buy').on('keyup', function(event) {
+        $('#buy-for').val($(this).val() * 50);
     });
 
     $('#datePicker')
