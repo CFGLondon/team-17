@@ -3,7 +3,9 @@ $this->title = 'Run 4 Good';
 use yii\helpers\Html;
 use yii\helpers\Url;
 use app\assets\MapAsset;
+use app\assets\MapGlobals;
 MapAsset::register($this);
+MapGlobals::register($this);
 ?>
 <div class="jumbotron">
   <div class="container">
@@ -36,7 +38,7 @@ MapAsset::register($this);
     </div>
     <div class="col-lg-8">
       <!-- The map -->
-      <div id="map-here" class="col-lg-12" height="400px"></div>
+      <div id="map-here" onload='init();' class="col-lg-12" height="400px"></div>
     </div>
     <div class="col-lg-4">
       <!-- Leaderboard -->
