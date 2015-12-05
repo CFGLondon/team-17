@@ -2,6 +2,8 @@
 $this->title = 'Run 4 Good';
 use yii\helpers\Html;
 use yii\helpers\Url;
+use app\assets\MapAsset;
+MapAsset::register($this);
 ?>
 <div class="jumbotron">
   <div class="container">
@@ -34,6 +36,7 @@ use yii\helpers\Url;
     </div>
     <div class="col-lg-8">
       <!-- The map -->
+      <div id="map-here" class="col-lg-12" height="400px"></div>
     </div>
     <div class="col-lg-4">
       <!-- Leaderboard -->
