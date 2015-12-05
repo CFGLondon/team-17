@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/img/logo-run4good1.png', ['style' => 'height: 100%']),
+        'brandLabel' => Html::img('@web/img/logo-run4good1.png', ['style' => 'height: 90%']),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-default navbar-fixed-top',
