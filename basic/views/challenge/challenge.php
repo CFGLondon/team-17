@@ -6,9 +6,9 @@ use yii\bootstrap\ActiveForm;
 ?>
 <div class="jumbotron" style="background: url('img/banner-profile.png'); background-size: cover; height: 600px">
   <div class="container text-center">
-    <?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '100', 'height' => '100')); ?>
-    <h3>Yoshua Bengio</h3>
-    <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support']) ?>" role="button">Support me</a></p>
+    <?= Html::img('@web/' . $hero['Pic'], array('class' => 'img-circle', 'width' => '100', 'height' => '100')); ?>
+    <h3><?= $hero['Name'] . ' ' . $hero['Surame'] ?></h3>
+    <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support', 'id' => $hero['Hid']]) ?>" role="button">Support me</a></p>
   </div>
 </div>
 <div class="container">

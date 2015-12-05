@@ -5,10 +5,11 @@ namespace app\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\ChallengeForm;
+use yii\db\Query;
 
 class ChallengeController extends Controller
 {
-	public function actionIndex()
+	public function actionIndex($id)
 	{
 		$session = \Yii::$app->session;
 		$request = \Yii::$app->request;
@@ -21,8 +22,14 @@ class ChallengeController extends Controller
 		}
 		else
 		{
+			$query = new Query;
+	        // compose the query
+	        $query->from('hero')
+	            ->where('Hid=:id', array(':id' => $id));
+	        $hero = $query->one();
 			return $this->render('challenge', [
-					'challengeForm' => $challengeForm
+					'challengeForm' => $challengeForm,
+					'hero' => $hero
 			]);
 		}
 	}

@@ -9,7 +9,7 @@ ChartAsset::register($this);
   <div class="container">
     <div class="col-lg-6">
       <div class="col-lg-4">
-        <?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '150', 'height' => '150')); ?>
+        <?= Html::img('@web/' . $hero['Pic'], array('class' => 'img-circle', 'width' => '150', 'height' => '150')); ?>
       </div>
       <div class="col-lg-8">
         <p>HERO</p>
@@ -21,8 +21,8 @@ ChartAsset::register($this);
       </div>
     </div>
     <div class="col-lg-6">
-      <p><a class="btn btn-success btn-lg" href="<?= Url::to(['/challenge']) ?>" role="button">Challenge me</a></p>
-      <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support']) ?>" role="button">Support me</a></p>
+      <p><a class="btn btn-success btn-lg" href="<?= Url::to(['/challenge', 'id' => $hero['Hid']]) ?>" role="button">Challenge me</a></p>
+      <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support', 'id' => $hero['Hid']]) ?>" role="button">Support me</a></p>
     </div>
   </div>
 </div>

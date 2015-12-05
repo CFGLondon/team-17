@@ -8,10 +8,11 @@ use app\models\DonateForm;
 use app\models\SupportForm;
 use app\models\BuyForm;
 use yii\base\Object;
+use yii\db\Query;
 
 class SupportController extends Controller
 {
-	public function actionIndex()
+	public function actionIndex($id)
 	{
 		$session = \Yii::$app->session;
 		$request = \Yii::$app->request;
@@ -38,8 +39,12 @@ class SupportController extends Controller
 			return $this->redirect('@web/index.php?r=support/motivation');
 		}
 		
-		
-		return $this->render('support');
+		$query = new Query;
+        // compose the query
+        $query->from('hero')
+            ->where('Hid=:id', array(':id' => $id));
+        $hero = $query->one();
+		return $this->render('support', array('hero' => $hero));
 	}
 	
 	public function actionBuy()

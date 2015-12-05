@@ -100,8 +100,7 @@ class SiteController extends Controller
     {
         $query = new Query;
         // compose the query
-        $query->select('Hid, Name, Surame')
-            ->from('hero')
+        $query->from('hero')
             ->where('Hid=:id', array(':id' => $id));
         $hero = $query->one();
 

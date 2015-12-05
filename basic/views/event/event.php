@@ -39,7 +39,7 @@ ChartAsset::register($this);
       <h2>Participants</h2>
         <?php foreach ($participants as $key => $hero) { ?>
         <div class="col-sm-3">
-          <a href="<?= Url::to(['/site/profile', 'id' => $hero['Hid']]) ?>"><?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
+          <a href="<?= Url::to(['/site/profile', 'id' => $hero['Hid']]) ?>"><?= Html::img('@web/' . $hero['Pic'], array('class' => 'img-circle', 'width' => '60', 'height' => '60')); ?></a>
           <p><?= $hero['Surame'] ?></p>
         </div>
         <?php } ?>
