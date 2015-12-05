@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
 	private $clientId = '229XBT';
 	
-	public function actionTry()
+	public function actionIndex()
 	{
 		$request = \Yii::$app->request;
 		
