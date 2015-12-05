@@ -1,39 +1,36 @@
 <?php
 $this->title = 'Run 4 Good | My Profile';
+use yii\helpers\Html;
+use yii\helpers\Url;
 ?>
-<div class="row row-offcanvas row-offcanvas-right">
-
-  <div class="col-xs-12 col-sm-9">
-    <p class="pull-right visible-xs">
-      <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-    </p>
-    <div class="jumbotron">
-      <h1>Hello, world!</h1>
-      <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-    </div>
-    <div class="row">
-      <?php for ($i = 0; $i < 6; $i++) { ?>
-      <div class="col-xs-6 col-lg-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+<div class="jumbotron">
+  <div class="container">
+    <div class="col-lg-6">
+      <div class="col-lg-4">
+        <?= Html::img('@web/img/bengio.jpg', array('class' => 'img-circle', 'width' => '150', 'height' => '150')); ?>
       </div>
-      <?php } ?>
-    </div><!--/row-->
-  </div><!--/.col-xs-12.col-sm-9-->
-
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-    <div class="list-group">
-      <a href="#" class="list-group-item active">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
+      <div class="col-lg-8">
+        <p>HERO</p>
+        <h2>Yoshua Bengio</h2>
+        <p>
+          6 Dec 2015<br>
+          Do It for Charity Text Santa Run
+        </p>
+      </div>
     </div>
-  </div><!--/.sidebar-offcanvas-->
+    <div class="col-lg-6">
+      <p><a class="btn btn-success btn-lg" href="#" role="button">Challenge me</a></p>
+      <p><a class="btn btn-warning btn-lg" href="<?= Url::to(['/support']) ?>" role="button">Support me</a></p>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+  <canvas id="myCanvas" style="background-color: gray" class="col-lg-12"></canvas>
+  <ul class="nav nav-pills nav-justified">
+    <li role="presentation" class="active"><a href="#">TIME</a></li>
+    <li role="presentation"><a href="#">DISTANCE</a></li>
+    <li role="presentation"><a href="#">CALORIES</a></li>
+  </ul>
 </div><!--/row-->
+</div>

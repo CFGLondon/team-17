@@ -25,6 +25,7 @@ class AppAsset extends AssetBundle
         'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
         'js/bootstrap.min.js',
         'js/ie10.js',
+        'js/bootstrap-datepicker.js',
         'js/app.js',
     ];
     public $depends = [

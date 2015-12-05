@@ -13,4 +13,9 @@ class EventController extends Controller
 	{
 		return $this->render('event');
 	}
+
+    public function actionCreate()
+    {
+        return $this->render('create');
+    }
 }
