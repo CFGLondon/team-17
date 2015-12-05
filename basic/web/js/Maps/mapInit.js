@@ -22,7 +22,7 @@ var report3;
 
 function init() {
 	mapBox = document.getElementById('map-here');
-	defaltLATLNG = new google.maps.LatLng(51.503226,  -0.0186017);
+	defaltLATLNG = new google.maps.LatLng(51.507226,  -0.0186017);
 
 	infoWindow = new google.maps.InfoWindow({
 	    content:  ""

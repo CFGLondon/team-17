@@ -2,6 +2,7 @@
 $this->title = 'Run 4 Good';
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 ?>
 <div class="jumbotron" style="background: url('img/banner-profile.png'); background-size: cover; height: 600px">
   <div class="container text-center">
@@ -15,80 +16,79 @@ use yii\helpers\Url;
   <div class="col-lg-4">
     <h2>Do Better</h2>
     <hr>
-    <form>
+    <?php $sForm = ActiveForm::begin(['class' => 'support-form']);?>
       <div class="form-group">
         <label for="date">by</label>
-        <div class="input-group">
-          <input name="date" type="text" class="form-control" id="date" placeholder="YYYY-MM-DD">
-          <div class="input-group-addon"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></div>
+        <div class="input-group input-append date" id="datePicker">
+          <input type="text" id="supportform-by" class="form-control" name="SupportForm[by]" />
+          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
         </div>
-        
       </div>
       <div class="form-group">
         <label for="run">run</label>
         <div class="input-group">
-          <input name="run" type="text" class="form-control" id="run" placeholder="">
+          <input name="SupportForm[run]" type="text" class="form-control" id="supportform-run" placeholder="">
           <div class="input-group-addon">miles</div>
         </div>
       </div>
       <div class="form-group">
         <label for="time">in</label>
         <div class="input-group">
-          <input name="time" type="text" class="form-control" id="time" placeholder="">
+          <input name="SupportForm[in]" type="text" class="form-control" id="supportform-in" placeholder="">
           <div class="input-group-addon">minutes</div>
         </div>
       </div>
       <div class="form-group">
         <label for="prize">prize</label>
         <div class="input-group">
-          <input name="prize" type="text" class="form-control" id="prize" placeholder="">
+          <input name="SupportForm[prize]" type="text" class="form-control" id="supportform-prize" placeholder="">
           <div class="input-group-addon"><span class="glyphicon glyphicon-gbp" aria-hidden="true"></div>
         </div>
       </div>
       <input class="btn btn-success" type="submit" value="£ Donate">
-    </form>
+    <?php ActiveForm::end();?>
   </div>
 
   <div class="col-lg-4">
     <h2>Buy a Mile</h2>
     <hr>
-    <form>
+    <?php $bForm = ActiveForm::begin(['class' => 'buy-form']);?>
       <div class="form-group">
         <label for="buy_mile">buy</label>
         <div class="input-group">
-          <input name="buy_mile" type="text" class="form-control" id="buy_mile" placeholder="">
+          <input name="BuyForm[buy]" type="text" class="form-control" id="buy-buy" placeholder="">
           <div class="input-group-addon">miles</div>
         </div>
       </div>
       <div class="form-group">
         <label for="buy_price">for</label>
         <div class="input-group">
-          <input name="buy_price" style="border: 0; box-shadow: none" type="text" readonly class="form-control" id="buy_price" placeholder="" value="">
+          <input name="BuyForm[for]" id='buy-for' style="border: 0; box-shadow: none" type="text" readonly class="form-control" id="buy_price" placeholder="" value="">
           <div class="input-group-addon"><span class="glyphicon glyphicon-gbp" aria-hidden="true"></div>
         </div>
       </div>
       <p>* 1 mile = £50</p>
       <input class="btn btn-success" type="submit" value="£ Donate">
-    </form>
+    <?php ActiveForm::end();?>
   </div>
 
   <div class="col-lg-4">
     <h2>Donate</h2>
     <hr>
-    <form>
+    <?php $dForm = ActiveForm::begin(['class' => 'donate-form']);?>
       <div class="form-group">
         <label for="donate">give</label>
         <div class="input-group">
-          <input name="donate" type="text" class="form-control" id="donate" placeholder="" value="">
+          <input name="DonateForm[give]" type="text" class="form-control" id="donateform-give" placeholder="" value="">
           <div class="input-group-addon"><span class="glyphicon glyphicon-gbp" aria-hidden="true"></div>
         </div>
       </div>
       <div class="form-group">
         <label for="message">Leave a message</label>
-        <textarea name="message" class="form-control" rows="3"></textarea>
+        <textarea class='col-md-4' style='width:100%;margin-bottom: 5px;' name="DonateForm[leaveMsg]" id="donateform-leavemsg" "class="form-control" rows="3"></textarea>
       </div>
       <input class="btn btn-success" type="submit" value="$ Donate">
-    </form>
+    <?php ActiveForm::end();?>
   </div>
 </div><!--/row-->
 </div>
