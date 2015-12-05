@@ -73,6 +73,13 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+    
+    public function actionDump()
+    {
+    	return $this->render('dump', [
+    			'dump' => \Yii::$app->session->get('dump')
+    	]);
+    }
 
     public function actionContact()
     {
