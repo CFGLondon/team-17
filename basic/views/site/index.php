@@ -24,7 +24,7 @@ use yii\helpers\Url;
     <div class="col-lg-4" style="padding-bottom: 20px; margin-bottom: 20px;">
     <?php } ?>
       <small>6 Dec 2015</small>
-      <h2>Do It for Charity<br>Text Santa Run</h2>
+      <a href="<?= Url::to(['/event']) ?>"><h2>Do It for Charity<br>Text Santa Run</h2></a>
       <p>Victoria Park, London</p>
       <p>
         Distance: 5km and 10km routes available<br>
@@ -41,7 +41,7 @@ use yii\helpers\Url;
           <p>Zoubin</p>
         </div>
         <?php } ?>
-        <a href="<?= Url::to(['/event']) ?>" class="btn btn-lg btn-primary">Join Us</a>
+        <a href="<?= Url::to(['/event']) ?>" class="btn btn-lg btn-info">Join Us</a>
       </div>
     </div>
     <?php } ?>

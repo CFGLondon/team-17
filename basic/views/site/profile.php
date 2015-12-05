@@ -2,6 +2,8 @@
 $this->title = 'Run 4 Good | My Profile';
 use yii\helpers\Html;
 use yii\helpers\Url;
+use app\assets\ChartAsset;
+ChartAsset::register($this);
 ?>
 <div class="jumbotron">
   <div class="container">

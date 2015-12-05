@@ -9,6 +9,7 @@ class ChartAsset extends AssetBundle
 	public $baseUrl = '@web/js/';
 	
 	public $js = [
+        'Chart.min.js',
 		'charts.js'
 	];
 	
